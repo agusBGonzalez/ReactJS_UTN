@@ -1,0 +1,15 @@
+h1 {
+  color: blueviolet;
+  text-align: center;
+}
+
+.divIMG {
+  float: left;
+  padding-right: 30px;
+}
+.divInfo {
+  padding: 15px;
+}
+body {
+  background-color: aquamarine;
+}
