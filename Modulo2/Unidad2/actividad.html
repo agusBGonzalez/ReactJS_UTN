@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <style>
+      .red {
+        background-color: red;
+      }
+      .blue {
+        background-color: blue;
+      }
+      .green {
+        background-color: green;
+      }
+      div:not(.container) {
+        width: 100px;
+        height: 100px;
+      }
+
+      .container {
+        width: 400px;
+        height: 300px;
+        border: 1px solid #000;
+        display: flex;
+        /* 
+        Primer punto
+        usando direction column decimos que queremos que sea una columna*/
+        flex-direction: column;
+        /* usando align items flex-end decimos que queremos que se ubiquen al final del componente */
+        align-items: flex-end;
+
+        /* Segundo punto */
+        /* justify-content: center;  centra el contenido (los 3 divs) dentro del div padre en base al valor width
+            space-between => teniendo 3 div con 100px de ancho dentro de un div de 400px, los 100px restantes se reparten de forma iguales 
+                    entre los div es decir  |  div  | 50px |  div  | 50px |  div  |
+            space-around => al igual que el anterior pero el espacio restante se divide de forma iguales entre la derecha e izquierda de cada div
+                    es decir   |16px|    div   |16px|16px|   div   |16px|16px|   div   |16px|
+            space-evenly => arregla el "problema" del anterior, es decir, los dos espacios juntos, la forma facil de ver lo que
+                    hace es sumar 1 a la cantidad de div que haya, en este caso va a haber 4 espacios 1 antes y despues de cada div, y entre ellos 
+                    es decir  | 25px |  div  | 25px |  div  | 25px |  div  | 25px |
+             */
+        justify-content: center;
+        /* justify-content: center;  centra el contenido (los 3 divs) dentro del div padre en base al valor heigth*/
+        align-items: center;
+      }
+    </style>
+    <div class="container">
+      <div class="red">1</div>
+      <div class="blue">2</div>
+      <div class="green">3</div>
+    </div>
+  </body>
+</html>
